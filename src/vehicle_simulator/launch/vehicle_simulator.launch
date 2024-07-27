@@ -156,6 +156,13 @@ def generate_launch_description():
       output='screen',
   )
 
+  start_gazebo_ros_image_bridge_cmd = Node(
+    package='ros_gz_image',
+    executable='image_bridge',
+    arguments=['/camera/image_raw'],
+    output='screen',
+  )
+
   start_vehicle_simulator = Node(
     package='vehicle_simulator', 
     executable='vehicleSimulator',
@@ -234,6 +241,7 @@ def generate_launch_description():
   ld.add_action(spawn_lidar)
   ld.add_action(spawn_camera)
   ld.add_action(start_gazebo_ros_bridge_cmd)
+  ld.add_action(start_gazebo_ros_image_bridge_cmd)
   ld.add_action(delayed_start_vehicle_simulator)
 
   return ld
