@@ -14,18 +14,18 @@
 
       <sensor name='gpu_lidar' type='gpu_lidar'>
         <topic>velodyne_points</topic>
-        <update_rate>10</update_rate>
+        <update_rate>5</update_rate>
         <lidar>
           <scan>
             <horizontal>
               <samples>360</samples>
-              <resolution>1</resolution>
+              <resolution>0.2</resolution>
               <min_angle>-3.14159</min_angle>
               <max_angle>3.14159</max_angle>
             </horizontal>
             <vertical>
               <samples>16</samples>
-              <resolution>1</resolution>
+              <resolution>2.0</resolution>
               <min_angle>-0.261799</min_angle>
               <max_angle>0.261799</max_angle>
             </vertical>
