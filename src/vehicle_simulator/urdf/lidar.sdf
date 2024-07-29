@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <sdf version='1.7'>
-<!-- <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="example"> -->
-
-  <!-- <link name="lidar" />
-
-  <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-  <xacro:VLP-16 parent="lidar" name="velodyne" topic="/velodyne_points" hz="6.3" samples="350" min_range="0.1">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </xacro:VLP-16> -->
   <model name="lidar">
     <pose>0.0 0.0 0.0 0 0 0</pose>
     <link name="link">
@@ -22,7 +14,7 @@
 
       <sensor name='gpu_lidar' type='gpu_lidar'>
         <topic>velodyne_points</topic>
-        <update_rate>6.3</update_rate>
+        <update_rate>10</update_rate>
         <lidar>
           <scan>
             <horizontal>
@@ -41,13 +33,12 @@
           <range>
             <min>0.1</min>
             <max>100.0</max>
-            <resolution>0.01</resolution>
+            <resolution>0.001</resolution>
           </range>
         </lidar>
-        <visualize>true</visualize>
+        <visualize>false</visualize>
       </sensor>
     </link>
     <static>true</static>
   </model>
 </sdf>
-<!-- </robot> -->
