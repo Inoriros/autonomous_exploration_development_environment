@@ -106,7 +106,7 @@ def generate_launch_description():
       '-name', 'robot',
       '-x','0.0',
       '-y','0.0',
-      '-z','1.0'
+      '-z','0.0'
     ],
     output='screen',
   )
@@ -120,7 +120,7 @@ def generate_launch_description():
       '-name', 'lidar',
       '-x','0.0',
       '-y','0.0',
-      '-z','1.0'
+      '-z','0.0'
     ],
     output='screen',
   )
@@ -134,7 +134,7 @@ def generate_launch_description():
       '-name', 'camera',
       '-x','0.0',
       '-y','0.0',
-      '-z','1.0'
+      '-z','0.0'
     ],
     output='screen',
   )
